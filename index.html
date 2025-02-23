@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gangstas Friends</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff0000, #ff3333, #f54b4b, #ff0000);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: rgb(255, 0, 0);
+            overflow: hidden;
+        }
+
+        .clouds {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://www.transparenttextures.com/patterns/clouds.png');
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: -1;
+            animation: cloudMove 30s linear infinite;
+        }
+
+        @keyframes cloudMove {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        .container {
+            text-align: center;
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 30px; 
+            margin-top: -40px; 
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+            color: #ff5c5c; 
+        }
+
+        h4 {
+            color: #ff5c5c; 
+            font-size: 1.2em;
+        }
+
+        .friend-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); 
+            gap: 30px; 
+            justify-items: center;
+            margin-top: 40px;
+        }
+
+        .friend-card {
+            background-color: rgba(0, 0, 0, 0.7); 
+            border-radius: 12px;
+            padding: 10px; 
+            width: 100%;
+            max-width: 260px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            opacity: 0; 
+            animation: fadeIn 0.8s forwards; 
+        }
+
+        .friend-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            margin-bottom: 8px;
+            text-transform: capitalize;
+            font-weight: bold;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); 
+        }
+
+        .friend-body p {
+            font-size: 1.1em; 
+            line-height: 1.4;
+            margin-bottom: 10px;
+            color: #fc6868; 
+        }
+
+        .friend-body a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            font-size: 1.1em; 
+            background-color: #6a4bff; 
+            padding: 6px 12px;
+            border-radius: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .friend-body a:hover {
+            background-color: #FF66B2;
+            transform: translateY(-3px);
+        }
+
+        .friend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.3em;
+            }
+
+            .friend-body p {
+                font-size: 1.1em;
+            }
+
+            .friend-body a {
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .friend-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="clouds"></div>
+    <div class="container">
+        <h1>Ma bestest Friends ily all < 3</h1>
+        <div class="friend-cards">
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Onyx</h2>
+                </div>
+                <div class="friend-body">
+                    <p>My girlfriend, future wife, most beautiful, pretty, gorgeous girl ever. The girl of my dreams</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>G4</h2>
+                </div>
+                <div class="friend-body">
+                    <p>Kewl dude whos even more chill then binly.</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Binly</h2>
+                </div>
+                <div class="friend-body">
+                    <p>a nice chill guy that’s fun to talk to😼</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Jay</h2>
+                </div>
+                <div class="friend-body">
+                    <p>one of my best friends and most trustworthy people. Can always rely on him to answer and listen to me</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>Decepted</h2>
+                </div>
+                <div class="friend-body">
+                    <p>my online dad a really nice and chill person if your chill with him</p>
+                </div>
+            </div>
+
+            <div class="friend-card">
+                <div class="friend-header">
+                    <h2>SuperCool</h2>
+                </div>
+                <div class="friend-body">
+                    <p>a nice and funny guy that’s fun to talk to</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = () => {
+            const friendCards = document.querySelectorAll('.friend-card');
+            friendCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.animation = 'fadeIn 0.8s forwards'; 
+                }, index * 200); 
+            });
+        };
+    </script>
+</body>
+</html>
